@@ -7,7 +7,7 @@ import Map, {NavigationControl, AttributionControl} from 'react-map-gl';
 
 export default function App() {
   const MAPBOX_ACCESS_TOKEN =
-    "pk.eyJ1IjoiZ2Vvcmdpb3MtdWJlciIsImEiOiJjanZidTZzczAwajMxNGVwOGZrd2E5NG90In0.gdsRu_UeU_uPi9IulBruXA";
+    "My Key";
 
 
   return (
