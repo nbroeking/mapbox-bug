@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+
+
+import React from 'react';
 import './App.css';
 
-function App() {
+import Map, {NavigationControl, AttributionControl} from 'react-map-gl';
+
+export default function App() {
+  const MAPBOX_ACCESS_TOKEN =
+    "pk.eyJ1IjoiZ2Vvcmdpb3MtdWJlciIsImEiOiJjanZidTZzczAwajMxNGVwOGZrd2E5NG90In0.gdsRu_UeU_uPi9IulBruXA";
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='app'>
+      <Map
+        initialViewState={{
+          latitude: 40,
+          longitude: -74.5,
+          zoom: 12
+        }}
+        style={{width: '100%', height: '90%'}}
+        mapStyle="mapbox://styles/mapbox/outdoors-v12"
+        mapboxAccessToken={MAPBOX_ACCESS_TOKEN}
+        attributionControl={true}
+      >
+      </Map>
     </div>
   );
 }
-
-export default App;
